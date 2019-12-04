@@ -1,10 +1,12 @@
 var liExist = false;
 
 function getParks(states, resultLimit){
-  if (states.length != 0){
+  if (states.replace(/\s/g, '').length){
   fetch(`https://developer.nps.gov/api/v1/parks?stateCode=${states}&limit=${resultLimit}&api_key=fg6IJp7H394nWU3MWxD2HVSyas22pK60kKMUew2H`)
   .then(response => response.json())
   .then(responseJson => logRenderParks(responseJson))
+  .catch(err => {
+      alert(`Something went wrong: ${err.message}`);
   }
   else {
     alert('No parks matching criteria, try again');
