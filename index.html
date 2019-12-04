@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Find National Parks & Places</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h3>Find surrounding national parks & places</h3>
+    <p>Enter a 2 character state code to find parks by state.  To search in multiple states separate with , i.e mn,wy,nd</p>
+    <form>
+      <label for="parkquery">State</label>
+      <input type="text" name="parkquery" id="park-query"/>
+      <label for="resultslimit">Result Limit (default 10)</label>
+      <input type="text" name="resultslimit" id="results-limit"/>
+      <input type="submit" value="Go"/>
+    </form>
+      <section class="park-list">
+        <ol>
+        </ol>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
