@@ -7,7 +7,7 @@ function getParks(states, resultLimit){
   .then(responseJson => logRenderParks(responseJson))
   .catch(err => {
       alert(`Something went wrong: ${err.message}`);
-  }
+  })
   else {
     alert('No parks matching criteria, try again');
   }
