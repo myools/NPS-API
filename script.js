@@ -26,7 +26,7 @@ function watchForm(){
   let resultLimit = $('#results-limit').val();
   console.log(resultLimit);
 
-  if(isNaN(resultLimit) || resultLimit.length == 0){
+  if(isNaN(resultLimit) || resultLimit.length == 0 || !resultLimit.replace(/\s/g, '').length){
     console.log('Not a number')
     resultLimit = 10;
   }
