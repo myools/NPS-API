@@ -28,6 +28,7 @@ function watchForm(){
 
   if(isNaN(resultLimit) || resultLimit.length == 0 || !resultLimit.replace(/\s/g, '').length){
     console.log('Not a number')
+    alert('Oops thats not a valid number, max results will be 10');
     resultLimit = 10;
   }
   
